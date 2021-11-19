@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos List</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link:css -->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="todo">
+      <h1 class="todo__title">Ed's Todo List</h1>
+
+      <form action="/" class="todo__form">
+        <input type="text" class="todo__input" required />
+        <button class="todo__btn" type="submit">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="todo__icon add"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <div tabindex="0" class="select">
+          <select name="category" id="category" class="todo__category">
+            <option value="All" class="todo__option">All</option>
+            <option value="Completed" class="todo__option">Completed</option>
+            <option value="Uncompleted" class="todo__option">
+              Uncompleted
+            </option>
+          </select>
+        </div>
+      </form>
+
+      <ul class="todo__list"></ul>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
